@@ -1,5 +1,5 @@
 exclude: ["README.md"]
 auto: true
-pygments: true
+pygments: false
 title : How to Markdown
 permalink: /index.html
