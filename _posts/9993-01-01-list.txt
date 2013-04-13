@@ -1,0 +1,15 @@
+---
+title: List
+category: en
+description:
+  A list is a block of lines, each starting with a `*` or incrementing number followed by a `.` symbol.
+---
+An unordered list:
+
+* Item 1
+* Item 2
+
+An ordered list:
+
+1. Item 1
+2. Item 2

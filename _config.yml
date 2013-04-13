@@ -1,0 +1,5 @@
+exclude: ["README.md"]
+auto: true
+pygments: true
+title : How to Markdown
+permalink: /index.html

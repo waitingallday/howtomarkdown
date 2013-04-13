@@ -1,0 +1,52 @@
+---
+layout: default
+category: 'en'
+---
+
+<div class="header">
+  <ul id="top">
+    <li>{{site.title}}</li>
+    {% for markdown in site.categories[page.category] %}
+      <li><a id="n-{{markdown.title | downcase}}" href="#{{markdown.title | downcase}}">{{ markdown.title }}</a></li>
+    {% endfor %}
+    <li><a id="n-about" href="#about">About</a></li>
+  </ul>
+</div>
+
+<div class="wrapper">
+  <div class="section">
+
+    {% for markdown in site.categories[page.category] %}
+      <span class="marker" id="{{markdown.title | downcase }}"></span><h1>{{ markdown.title }}</h1>
+      {{ markdown.description | markdownify }}
+
+      <div class="col-2 source">
+        <strong>Markdown</strong>
+        <blockquote data-title="Example" class="on">
+          {{ markdown.content | newline_to_br }}
+        </blockquote>
+      </div>
+      <div class="col-2 tabs">
+        <ul class="nav">
+          <li data-rel="Result" class="on">Output</li>
+          <li data-rel="HTML">HTML</li>
+        </ul>
+        <blockquote data-title="Result" class="on">
+          {{ markdown.content | markdownify }}
+        </blockquote>
+        <blockquote data-title="HTML">
+          <pre>
+{{ markdown.content | markdownify | escape }}
+          </pre>
+        </blockquote>
+      </div>
+    {% endfor %}
+
+
+    <span class="marker" id="about"></span><h1>About</h1>
+    {% capture about_content %}{% include about.md %}{% endcapture %}
+    {{ about_content | markdownify }}
+    <div id="colophon"></div>
+
+  </div>
+</div>

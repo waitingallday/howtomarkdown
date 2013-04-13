@@ -1,0 +1,9 @@
+---
+title: Link
+category: en
+description:
+  To add a link, surround the link text `[` and `]` symbols, followed by the link URL surrounded by `(` and `)` symbols.
+---
+A simple [text link](http://howtomarkdown.com) mid sentence.
+
+Another link: [http://howtomarkdown.com](http://howtomarkdown.com)

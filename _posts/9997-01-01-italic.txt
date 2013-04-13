@@ -1,0 +1,9 @@
+---
+title: Italic
+category: en
+description:
+  To make a word or sentence _italic_, surround it with a `*` or `_` symbol.
+---
+Only this *word* and this _word_ should be italic.
+
+And these *two words* should be italic, as well as _these two_.

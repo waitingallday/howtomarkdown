@@ -1,0 +1,8 @@
+---
+title: Image
+category: en
+description:
+  To add an image, use an `!` symbol followed by the image alt text wrapped in `[` and `]` symbols and the image URL surrounded by `(` and `)` symbols.
+
+---
+![a cat picture](http://placekitten.com/200/200)

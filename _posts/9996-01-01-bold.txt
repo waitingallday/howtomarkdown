@@ -1,0 +1,9 @@
+---
+title: Bold
+category: en
+description:
+  To make a word or sentence **bold**, surround it with `**` or `__` symbols.
+---
+Only this **word** and this __word__ should be bold.
+
+And these **two words** should be bold, as well as __these two__.
