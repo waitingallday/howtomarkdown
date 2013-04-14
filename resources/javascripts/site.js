@@ -1,11 +1,20 @@
 $(function() {
-	// Print this page
-	if ($('#print').length>0) {
-		$('#print').click(function(e){
-			e.preventDefault();
-			window.print();
-		});
-	}
+    // Header
+    $('.marker').each(function(i) {
+        var position = $(this).position();
+        $(this).scrollspy({
+            min: position.top,
+            max: position.top + $(this).height(),
+            onEnter: function(element, position) {
+                $("#top a").removeClass("on");
+                $("#n-"+$(element).attr("id")).addClass("on");
+            }
+        });
+    });
+    $('#top a').on('click tap', function() {
+        $("#top a").removeClass("on");
+        $(this).addClass("on");
+    });
 
     // Tabby
     $('ul.nav').children('li').on('mouseover click tap', function(){
@@ -16,24 +25,5 @@ $(function() {
         $(this).closest('div').children('blockquote').each(function(){
             if ($(this).data('title')==curr) $(this).addClass('on');
         });
-    });
-
-    $('.marker').each(function(i) {
-        var position = $(this).position();
-        $(this).scrollspy({
-            min: position.top,
-            max: position.top + $(this).height(),
-            onEnter: function(element, position) {
-                $("#top a").removeClass("on");
-                $("#n-"+$(element).attr("id")).addClass("on");
-            },
-            onLeave: function(element, position) {
-//                $("#top a").removeClass("on");
-            }
-        });
-    });
-    $('#top a').on('click tap', function() {
-        $("#top a").removeClass("on");
-        $(this).addClass("on");
     });
 });
