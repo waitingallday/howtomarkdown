@@ -1,0 +1,9 @@
+This is the markdown one hosted on github. How meta.
+
+Content and jekyll wrangling: Neil Ang @neilang
+"Design" and front end: Jason Smith @waitingallday
+Markdown: John Gruber
+Placekitten: Mark James
+Markdown logo: Dustin Curtis
+
+Set in Lato, it's good enough.
