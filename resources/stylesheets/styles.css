@@ -7,6 +7,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, table, pre, dl {margin:0 0 0.4em; font-weight
 
 h1 {font-size:1.4em; color:#000;}
 
+.github {position:absolute; top:30px; right:0; border:0;}
+
 .header {position:fixed; left:0; top:0; background:#fff; z-index:2; width:100%; padding:0.2em 1em;
   -moz-box-shadow:0px 9px 15px -9px rgba(0,0,0,0.4); -webkit-box-shadow:0px 9px 15px -9px rgba(0,0,0,0.4); box-shadow:0px 9px 15px -9px rgba(0,0,0,0.4);}
 .header ul {margin:0 auto; width:820px; *width:780px; height:1.2em;}
@@ -70,6 +72,7 @@ blockquote code {line-height:1.2;}
 
 @media print {
 	body {color:#333 !important; background:#fff !important; font-size:11pt; line-height:1.2;}
+	.github,
 	.header,
 	#colophon {display:none;}
 	.source strong,
@@ -78,6 +81,8 @@ blockquote code {line-height:1.2;}
 	.tabs ul.nav li,
 	.tabs ul.nav li.on {text-transform:uppercase; font-weight:700; color:#f5efd5; border:0;}
 	.tabs ul.nav li:last-child {display:none;}
+	p code {border-color:#f5efd5;}
 	.col-2 {page-break-inside:avoid;}
-	blockquote {border-color:#ddd; -moz-box-shadow:0 0 0 0 #fff; -webkit-box-shadow:0 0 0 0 #fff; box-shadow:0 0 0 0 #fff;}
+	blockquote {border-color:#ddd; -moz-box-shadow:0 0 0 0 #fff; -webkit-box-shadow:0 0 0 0 #fff; box-shadow:0 0 0 0 #fff; display:block;}
+	.tabs blockquote:last-child {display:none;}
 }
