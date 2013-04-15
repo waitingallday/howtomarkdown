@@ -51,6 +51,7 @@ blockquote h2 {font-size:1.5em; font-weight:300;}
 blockquote h3 {font-size:1.2em; font-weight:300;}
 blockquote p,
 blockquote li {line-height:1.2;}
+blockquote p strong {font-weight:700;}
 blockquote ol,
 blockquote ul {padding-left:2em; padding-bottom:1em;}
 blockquote pre {font-size:0.7em; line-height:1.2; font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal; width:100%; overflow:scroll;}
