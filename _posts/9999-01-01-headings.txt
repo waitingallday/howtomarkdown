@@ -2,7 +2,7 @@
 title: Headings
 category: en
 description:
-  A heading is a line of text preceded by one or more `#` symbols. The more `#` symbols used, the smaller the heading.
+  A heading is a line of text preceded by one or more `#` symbols. The more `#` symbols used, the less important the heading.
 ---
 # Heading 1
 
