@@ -3,52 +3,54 @@ layout: default
 category: 'en'
 ---
 
-<a href="https://github.com/waitingallday/howtomarkdown"><img class="github" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-
-<div class="header">
-  <ul id="top">
-    <li>{{site.title}}</li>
+<header>
+  <nav>
+    <h1>{{site.title}}</h1>
     {% for markdown in site.categories[page.category] %}
-      <li><a id="n-{{markdown.title | downcase}}" href="#{{markdown.title | downcase}}">{{ markdown.title }}</a></li>
+    <a id="n-{{markdown.title | downcase}}" href="#{{markdown.title | downcase}}">{{ markdown.title }}</a>
     {% endfor %}
-    <li><a id="n-about" href="#about">About</a></li>
-  </ul>
-</div>
+    <a id="n-about" href="#about">About</a>
+  </nav>
+</header>
 
-<div class="wrapper">
-  <div class="section">
-
-    {% for markdown in site.categories[page.category] %}
+<div role="main">
+  {% for markdown in site.categories[page.category] %}
+    <section>
       <span class="marker" id="{{markdown.title | downcase }}"></span><h1>{{ markdown.title }}</h1>
       {{ markdown.description | markdownify }}
 
-      <div class="col-2 source">
-        <strong>Markdown</strong>
-        <blockquote data-title="Example" class="on">
-          {{ markdown.content | newline_to_br }}
-        </blockquote>
-      </div>
-      <div class="col-2 tabs">
-        <ul class="nav">
-          <li data-rel="Result" class="on">Output</li>
-          <li data-rel="HTML">HTML</li>
-        </ul>
-        <blockquote data-title="Result" class="on">
-          {{ markdown.content | markdownify }}
-        </blockquote>
-        <blockquote data-title="HTML">
-          <pre>
+      <div class="examples">
+        <div class="col-3 source">
+          <label>Markdown</label>
+          <div class="col-inner">
+            <pre>
+{{ markdown.content }}
+            </pre>
+          </div>
+        </div>
+
+        <div class="col-3 html">
+          <label>HTML</label>
+          <div class="col-inner">
+            <pre>
 {{ markdown.content | markdownify | escape }}
-          </pre>
-        </blockquote>
+            </pre>
+          </div>
+        </div>
+
+        <div class="col-3 output">
+          <label>Output</label>
+          <div class="col-inner">
+            {{ markdown.content | markdownify }}
+          </div>
+        </div>
       </div>
-    {% endfor %}
+    </section>
+  {% endfor %}
 
-
+  <section>
     <span class="marker" id="about"></span><h1>About</h1>
     {% capture about_content %}{% include about.md %}{% endcapture %}
     {{ about_content | markdownify }}
-    <div id="colophon"></div>
-
-  </div>
+  </section>
 </div>
